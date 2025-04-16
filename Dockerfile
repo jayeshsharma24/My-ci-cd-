@@ -15,10 +15,10 @@ RUN apt-get update && \
 COPY ./index.html /var/www/html/
 
 # Set permissions (optional but good practice)
-RUN chown -R index.html /var/www/html
+#RUN chown -R index.html /var/www/html
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
 # Start Apache in the foreground
 CMD ["apachectl", "-D", "FOREGROUND"]
